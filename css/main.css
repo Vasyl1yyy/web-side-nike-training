@@ -72,6 +72,19 @@ body {
   box-shadow: 7px 7px 10px 0 var(--gray);
 }
 
+.navbar-toggler {
+  border: none;
+}
+
+.menu {
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 var(--green);
+}
+
 /* header */
 
 header {
