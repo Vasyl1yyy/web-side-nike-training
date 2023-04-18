@@ -15,3 +15,12 @@ body {
   --gray: #E5F2E1;
   --white: #F6FFF3;
 }
+
+/* nav */
+
+/* hedear */
+
+header {
+  height: 100vh;
+  background-color: var(--green-white);
+}
