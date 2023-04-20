@@ -2,6 +2,15 @@
   font-family: 'Raleway', sans-serif;
   color: var(--black);
   font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+button {
+  all: unset;
 }
 
 body {
@@ -14,9 +23,54 @@ body {
   --green: #5CBE3A;
   --gray: #E5F2E1;
   --white: #F6FFF3;
+  --index: calc(1vw + 1vh);
+}
+
+.container {
+  margin: 0 calc(var(--index) * 8);
 }
 
 /* nav */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu-text{
+  margin: 0 20px;
+  font-weight: 500;
+  font-size: calc(var(--index) * 0.7);
+  opacity: 0.6;
+}
+
+.active {
+  opacity: 1;
+}
+
+.btn {
+  border: 2px solid var(--green);
+  border-radius: 8px;
+  padding: calc(var(--index) * .4) calc(var(--index) * .8);
+  text-transform: uppercase;
+  background-color: var(--green);
+  color: #fff;
+  cursor: pointer;
+  font-size: calc(var(--index) * .7);
+  font-weight: 500;
+  transition: all 1s;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: var(--green);
+}
 
 /* hedear */
 
