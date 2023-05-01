@@ -32,6 +32,19 @@ body {
 
 /* nav */
 
+.nav-mobile {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.nav-mobile-menu {
+  font-size: calc(var(--index) * 1.8);
+  color: var(--black);
+  cursor: pointer;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -43,6 +56,10 @@ body {
   display: flex;
 }
 
+.nav-logo {
+  width: calc(var(--index) * 3.5);
+}
+
 .nav-menu-text {
   margin: 0 20px;
   font-weight: 500;
@@ -50,8 +67,36 @@ body {
   opacity: 0.6;
 }
 
+.nav-menu-text a {
+  transition: all .5s;
+  position: relative;
+}
+
 .active {
   opacity: 1;
+}
+
+.nav-menu-text a:hover {
+  color: var(--green);
+}
+
+.nav-menu-text a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--green);
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .5s;
+}
+
+.nav a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
 .btn {
@@ -83,7 +128,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 75vh;
+  height: 78vh;
 }
 
 .btn-while {
@@ -118,6 +163,10 @@ header {
   font-size: calc(var(--index) * .6);
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.header-text-green-logo {
+  width: calc(var(--index) * 1.8);
 }
 
 .header-title {
@@ -178,4 +227,59 @@ header {
   opacity: 0.7;
   font-size: calc(var(--index) * .6);
   margin-top: 5px;
+}
+
+.header-right img {
+  width: calc(var(--index) * 25);
+}
+
+@media all and (max-width: 800px) {
+  .nav-mobile {
+    display: flex;
+  }
+  .navbar {
+    display: none;
+  }
+  .container {
+    margin: 0 calc(var(--index) * 4);
+  }
+}
+
+@media all and (max-width: 650px) {
+  .header {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+  }
+  .header-text-green, .price, .header-btns, .header-statistics {
+    justify-content: center;
+  }
+  .header-text-green p {
+    font-size: calc(var(--index) * 1);
+  }
+  .header-text-green-logo {
+    width: calc(var(--index) * 3);
+  }
+  .header-title {
+    font-size: calc(var(--index) * 2.5);
+  }
+  .header-text {
+    font-size: calc(var(--index) * .9);
+  }
+  .price p {
+    font-size: calc(var(--index) * 2);
+  }
+  .price del {
+    font-size: calc(var(--index) * 1.6);
+  }
+  .btn, .btn-while {
+    font-size: calc(var(--index) * 1.2);
+    padding: calc(var(--index) * .6) calc(var(--index) * 1);;
+  }
+  .num {
+    font-size: calc(var(--index) * 3.8);
+  }
+  .statistics-text {
+    font-size: calc(var(--index) * .9);
+  }
 }
