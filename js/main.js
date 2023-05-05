@@ -8,7 +8,7 @@ btn.addEventListener('click', () => {
   menu.classList.add('show');
 })
 
-close.addEventListener('click', () => {
+bg.addEventListener('click', () => {
   bg.classList.remove('show-bg');
   menu.classList.remove('show');
 })
