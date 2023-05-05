@@ -39,8 +39,8 @@ body {
   padding-top: 20px;
 }
 
-.nav-mobile-menu {
-  font-size: calc(var(--index) * 1.8);
+.nav-mobile-menu-btn {
+  font-size: calc(var(--index) * 2);
   color: var(--black);
   cursor: pointer;
 }
@@ -115,6 +115,64 @@ body {
 .btn:hover {
   background-color: #fff;
   color: var(--green);
+}
+
+.nav-mobile-menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #05110141;
+  z-index: 100;
+  opacity: 0;
+  right: -100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.show-bg {
+  right: 0;
+  opacity: 1;
+}
+
+.nav-mobile-menu-right {
+  position: relative;
+  margin-left: auto;
+  background-color: #fff;
+  width: 25vw;
+  height: 100vh;
+  right: -100%;
+  opacity: 0;
+  transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.show {
+  right: 0;
+  opacity: 1; /* закінчення анімації - зміна opacity на 1 */
+}
+
+.nav-mobile-menu-right-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.nav-mobile-menu-right-nav-close {
+  font-size:  calc(var(--index) * 1.5);
+  cursor: pointer;
+}
+
+.nav-mobile-menu-right-menu-text a {
+  display: block;
+  padding: 8px 0 ;
+  padding-left: 15px;
+}
+
+.nav-mobile-menu-right-menu-text a:hover {
+  border-left: 3px solid var(--green);
+  transition: all .2s;
+}
+
+.active-mobile {
+  border-left: 3px solid var(--green);
 }
 
 /* hedear */
@@ -243,6 +301,9 @@ header {
   .container {
     margin: 0 calc(var(--index) * 4);
   }
+  .nav-mobile-menu-right {
+    width: 50vw;
+  }
 }
 
 @media all and (max-width: 650px) {
@@ -281,5 +342,8 @@ header {
   }
   .statistics-text {
     font-size: calc(var(--index) * .9);
+  }
+  .nav-mobile-menu-right {
+    width: 75vw;
   }
 }
