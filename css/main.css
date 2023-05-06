@@ -21,7 +21,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 :root {
   --green-white: #EBFFE4;
   --black: #051101;
@@ -353,6 +352,84 @@ header {
   font-size: calc(var(--index) * 0.9);
 }
 
+/* about */
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: calc(var(--index) * 9);
+}
+
+.about-left {
+  position: relative;
+  background-color: #F6FFF3;
+  border-radius: 10px;
+  padding: calc(var(--index) * 4) calc(var(--index) * 2);
+  margin-right: calc(var(--index) * -5);
+  padding-right: calc(var(--index) * 5);
+  width: calc(var(--index) * 22);
+  height: calc(var(--index) * 16);
+  z-index: 2;
+}
+
+.about-left h2 {
+  font-size: calc(var(--index) * 1.5);
+  font-weight: 700;
+}
+
+.about-left p {
+  opacity: 0.7;
+  font-size: calc(var(--index) * .6);
+  margin-top: calc(var(--index) / 2);
+}
+
+.view {
+  position: absolute;
+  transform: rotate(-90deg);
+  font-size: calc(var(--index) * 5);
+  font-weight: 700;
+  left: calc(var(--index) * 3.2);
+  color: #E5F2E1;
+}
+
+.about-right {
+  z-index: 10;
+}
+
+.about-right a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-right img {
+  width: calc(var(--index) * 20);
+  border-radius: 10px;
+}
+
+.play {
+  position: absolute;
+}
+
+.play-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: var(--green);
+  height: calc(var(--index) * 3);
+  width: calc(var(--index) * 3);
+  border-radius: 50%;
+}
+
+.play-logo ion-icon{
+  position: absolute;
+  color: #fff;
+  font-size: calc(var(--index) * 1.8);
+  margin-right: -3px;
+}
+
 @media all and (max-width: 800px) {
   .nav-mobile {
     display: flex;
@@ -365,6 +442,9 @@ header {
   }
   .nav-mobile-menu-right {
     width: 50vw;
+  }
+  .about {
+    margin-top: calc(var(--index) * 9);
   }
 }
 
@@ -422,5 +502,27 @@ header {
   }
   .star, .star-none, .latest-cart p, .latest-cart h3{
     font-size: calc(var(--index) * 1.5);
+  }
+  .about {
+    flex-direction: column;
+  }
+  .about-left {
+    margin: 0;
+    text-align: center;
+    padding: calc(var(--index) * 4) calc(var(--index) * 2);
+    margin-bottom: calc(var(--index) * -4);
+    width: calc(var(--index) * 28);
+  }
+  .about-left h2 {
+    font-size: calc(var(--index) * 2);
+  }
+  .about-left p {
+    font-size: calc(var(--index) * .9);
+  }
+  .about-right img {
+    width: calc(var(--index) * 26);
+  }
+  .view {
+    display: none;
   }
 }
