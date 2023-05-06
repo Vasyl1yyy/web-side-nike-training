@@ -34,6 +34,20 @@ html {
   margin: 0 calc(var(--index) * 8);
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--green);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
 /* nav */
 
 .nav-mobile {
