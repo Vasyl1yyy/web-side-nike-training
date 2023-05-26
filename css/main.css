@@ -581,6 +581,64 @@ header {
   margin: calc(var(--index) * .8) 0;
 }
 
+.review-avatar-img img {
+  width: calc(var(--index) * 3);
+}
+
+.subescribe {
+  padding: calc(var(--index) * 3);
+  background-color: #97dd8083;
+  text-align: center;
+  margin-top: calc(var(--index) * 9);
+  border-radius: 12px;
+}
+
+.subescribe h2 {
+  font-size: calc(var(--index) * 1.5);
+  font-weight: 700;
+  margin: calc(var(--index) * .8) 0;
+}
+
+.subescribe p {
+  opacity: 0.7;
+  font-size: calc(var(--index) * .6);
+  margin-left: calc(var(--index) / 2);
+  margin-bottom: calc(var(--index) * .8);
+}
+
+.footer {
+  border-top: 1px solid var(--gray);
+  margin-top: calc(var(--index) * 3);
+  border-bottom: 15px solid var(--green);
+  padding-bottom: calc(var(--index) * 1);
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
+
+.social p {
+  font-size: calc(var(--index) * .8);
+  font-weight: 700;
+  margin-right: calc(var(--index) * .2);
+}
+
+.social-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--green);
+  height: calc(var(--index) * 1.6);
+  width: calc(var(--index) * 1.6);
+  border-radius: 50%;
+  margin: 0 calc(var(--index) * .2);;
+}
+
+.social-img img {
+  height: calc(var(--index) * .6);
+}
+
 @media all and (max-width: 800px) {
   .nav-mobile {
     display: flex;
@@ -695,5 +753,4 @@ header {
   .best-img-border {
     display: none;
   }
-  
 }
