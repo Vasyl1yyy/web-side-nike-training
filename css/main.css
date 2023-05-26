@@ -652,7 +652,7 @@ header {
   .nav-mobile-menu-right {
     width: 50vw;
   }
-  .about {
+  .about, .subescribe, .reviews {
     margin-top: calc(var(--index) * 9);
   }
   .best {
@@ -737,7 +737,7 @@ header {
   .view {
     display: none;
   }
-  .best {
+  .best, .reviews {
     flex-direction: column-reverse;
   }
   .best-text-title {
@@ -752,5 +752,31 @@ header {
   }
   .best-img-border {
     display: none;
+  }
+  .review {
+    margin: 0;
+    margin-bottom: calc(var(--index) * 1.4);
+  }
+  .review h3 {
+    font-size: calc(var(--index) * 1.8);
+  }
+  .review {
+    width: calc(var(--index) * 28);
+  }
+  .review-avatar-img img {
+    width: calc(var(--index) * 4);
+  }
+  .review-avatar-name {
+    font-weight: 600;
+    font-size: calc(var(--index) * 1.4);
+  }
+  .review-avatar-review {
+    font-size: calc(var(--index) * .9);
+  }
+  .subescribe h2 {
+    font-size: calc(var(--index) * 2);
+  }
+  .subescribe p {
+    font-size: calc(var(--index) * .9);
   }
 }
