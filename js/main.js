@@ -10,6 +10,9 @@ const pointThree = document.querySelector('#point-three');
 const reviewOne = document.querySelector('#review-one');
 const reviewTwo = document.querySelector('#review-two');
 const reviewThree = document.querySelector('#review-three');
+const errorBtn = document.querySelectorAll('#error-close');
+const error = document.querySelector('.error');
+const errorBlock = document.querySelectorAll('#error')
 
 let count = 1;
 
@@ -18,6 +21,18 @@ for (var i = 0; i < btns.length; i++) {
     bg.classList.add('show-bg');
     menu.classList.add('show');
   });
+}
+
+for (var i = 0; i < errorBtn.length; i++){
+  errorBtn[i].addEventListener('click', () => {
+    error.style.display = 'none';
+  })
+}
+
+for (var i = 0; i < errorBlock.length; i++){
+  errorBlock[i].addEventListener('click', () => {
+    error.style.display = 'flex';
+  })
 }
 
 bg.addEventListener('click', function() {
