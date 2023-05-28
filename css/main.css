@@ -523,10 +523,12 @@ header {
   font-size: calc(var(--index) * .8);
   color: #5bbe3a62;
   cursor: pointer;
+  transition: all .2s;
 }
 
 .point-active {
   color: var(--green);
+  transition: all .2s;
 }
 
 .arrow {
@@ -548,17 +550,25 @@ header {
 }
 
 .review {
+  display: none;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   width: calc(var(--index) * 22);
   margin-left: calc(var(--index) * 6);
   padding: calc(var(--index) * 3) calc(var(--index) * 3);
+  transition: all .2s;
+}
+
+.review-active {
+  display: block;
+  transition: all .2s;
 }
 
 .review h3 {
   font-weight: 700;
   font-size: calc(var(--index) * 1.2);
+  transition: all .2s;
 }
 
 .review-avatar {
@@ -573,16 +583,20 @@ header {
 .review-avatar-name {
   font-weight: 600;
   font-size: calc(var(--index) * 0.8);
+  transition: all .2s;
 }
 
 .review-avatar-review {
   opacity: 0.7;
   font-size: calc(var(--index) * .6);
   margin: calc(var(--index) * .8) 0;
+  transition: all .2s;
 }
 
 .review-avatar-img img {
   width: calc(var(--index) * 3);
+  border-radius: 50%;
+  transition: all .2s;
 }
 
 .subescribe {
@@ -778,5 +792,11 @@ header {
   }
   .subescribe p {
     font-size: calc(var(--index) * .9);
+  }
+  .point {
+    font-size: calc(var(--index) * 1.6);
+  }
+  .arrow {
+    font-size: calc(var(--index) * 1.8);
   }
 }
