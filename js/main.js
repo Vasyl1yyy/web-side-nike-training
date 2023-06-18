@@ -2,6 +2,7 @@ const btns = document.querySelectorAll('.nav-mobile-menu-btn');
 const menu = document.querySelector('.nav-mobile-menu-right');
 const bg = document.querySelector('.nav-mobile-menu');
 const close = document.querySelector('.nav-mobile-menu-right-nav-close');
+
 const arrowLeft = document.querySelector('.reviews-arrow-left');
 const arrowRight = document.querySelector('.reviews-arrow-right');
 const pointOne = document.querySelector('#point-one');
@@ -10,14 +11,13 @@ const pointThree = document.querySelector('#point-three');
 const reviewOne = document.querySelector('#review-one');
 const reviewTwo = document.querySelector('#review-two');
 const reviewThree = document.querySelector('#review-three');
+
 const errorBtn = document.querySelectorAll('#error-close');
 const error = document.querySelector('.error');
-const errorBlock = document.querySelectorAll('#error')
-
-let count = 1;
+const errorBlock = document.querySelectorAll('#error');
 
 for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener('click', function() {
+  btns[i].addEventListener('click', () => {
     bg.classList.add('show-bg');
     menu.classList.add('show');
   });
@@ -35,10 +35,42 @@ for (var i = 0; i < errorBlock.length; i++){
   })
 }
 
-bg.addEventListener('click', function() {
+bg.addEventListener('click', () => {
   bg.classList.remove('show-bg');
   menu.classList.remove('show');
 });
+
+let count = 1;
+
+const one = () => {
+  pointOne.classList.add('point-active');
+  pointTwo.classList.remove('point-active');
+  pointThree.classList.remove('point-active');
+
+  reviewOne.classList.add('review-active');
+  reviewTwo.classList.remove('review-active');
+  reviewThree.classList.remove('review-active');
+}
+
+const two = () => {
+  pointOne.classList.remove('point-active');
+  pointTwo.classList.add('point-active');
+  pointThree.classList.remove('point-active');
+
+  reviewOne.classList.remove('review-active');
+  reviewTwo.classList.add('review-active');
+  reviewThree.classList.remove('review-active');
+}
+
+const three = () => {
+  pointOne.classList.remove('point-active');
+  pointTwo.classList.remove('point-active')
+  pointThree.classList.add('point-active')
+
+  reviewOne.classList.remove('review-active')
+  reviewTwo.classList.remove('review-active')
+  reviewThree.classList.add('review-active')
+}
 
 arrowLeft.addEventListener('click' , () => {
   count = count - 1
@@ -46,25 +78,13 @@ arrowLeft.addEventListener('click' , () => {
     count = 2
   }
   if (count == 0) {
-    pointOne.classList.add('point-active');
-    pointTwo.classList.remove('point-active');
-
-    reviewOne.classList.add('review-active')
-    reviewTwo.classList.remove('review-active')
+    one();
   }
   if (count == 2) {
-    pointThree.classList.add('point-active');
-    pointOne.classList.remove('point-active')
-
-    reviewThree.classList.add('review-active')
-    reviewOne.classList.remove('review-active')
+    three();
   }
   if (count == 1) {
-    pointTwo.classList.add('point-active');
-    pointThree.classList.remove('point-active')
-
-    reviewTwo.classList.add('review-active')
-    reviewThree.classList.remove('review-active')
+    two();
   }
 })
 
@@ -74,57 +94,27 @@ arrowRight.addEventListener('click' , () => {
     count = 0
   }
   if (count == 2) {
-    pointThree.classList.add('point-active');
-    pointTwo.classList.remove('point-active')
-
-    reviewThree.classList.add('review-active')
-    reviewTwo.classList.remove('review-active')
+    three();
   }
   if (count == 0) {
-    pointOne.classList.add('point-active');
-    pointThree.classList.remove('point-active')
-
-    reviewOne.classList.add('review-active')
-    reviewThree.classList.remove('review-active')
+    one();
   }
   if (count == 1) {
-    pointTwo.classList.add('point-active');
-    pointOne.classList.remove('point-active')
-
-    reviewTwo.classList.add('review-active')
-    reviewOne.classList.remove('review-active')
+    two()
   }
 })
 
 pointOne.addEventListener('click' , () => {
   count = 0 
-  pointOne.classList.add('point-active');
-  pointTwo.classList.remove('point-active')
-  pointThree.classList.remove('point-active')
-
-  reviewOne.classList.add('review-active')
-  reviewTwo.classList.remove('review-active')
-  reviewThree.classList.remove('review-active')
+  one();
 })
 
 pointTwo.addEventListener('click' , () => {
   count = 1 
-  pointOne.classList.remove('point-active');
-  pointTwo.classList.add('point-active')
-  pointThree.classList.remove('point-active')
-
-  reviewOne.classList.remove('review-active')
-  reviewTwo.classList.add('review-active')
-  reviewThree.classList.remove('review-active')
+  two();
 })
 
 pointThree.addEventListener('click' , () => {
   count = 2 
-  pointOne.classList.remove('point-active');
-  pointTwo.classList.remove('point-active')
-  pointThree.classList.add('point-active')
-
-  reviewOne.classList.remove('review-active')
-  reviewTwo.classList.remove('review-active')
-  reviewThree.classList.add('review-active')
+  three()
 })
